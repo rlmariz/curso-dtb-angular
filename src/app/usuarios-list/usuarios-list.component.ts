@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {usuarios} from '../../models/usuarios.model';
+import {Usuario} from '../../models/usuario.model';
+import {UsuarioService} from '../../services/usuario.service';
 
 @Component({
   selector: 'app-usuarios-list',
@@ -8,11 +9,20 @@ import {usuarios} from '../../models/usuarios.model';
 })
 export class UsuariosListComponent implements OnInit {
 
-  usuarios = usuarios;
+  usuarios: Usuario[] = [];
+  usuario: any = {};
 
-  constructor() { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
+    this.usuario.nome = 'Maria';
+    this.usuarioService.getAll().subscribe(u => {
+        this.usuarios = u;
+    });
   }
 
+  salvar(): void {
+      this.usuario.nome = 'João';
+      window.alert('Salvando....');
+  }
 }

@@ -5,3 +5,10 @@
 <div *ngFor='let usuario of usuarios'>
   {{usuario.nome}}
 </div>
+
+<button (click)="salvar()">Salvar</button>
+
+<input type="text" [(ngModel)]="usuario.nome">  
+<div>
+  {{ usuario.nome }}
+</div>
