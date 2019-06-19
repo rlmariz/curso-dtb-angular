@@ -1,0 +1,31 @@
+<p>
+  nota-list works!
+</p>
+<table id="gridNotas">
+
+  <thead>
+      <tr>
+          <th>
+              Número
+          </th>
+          <th>
+              Emissor
+          </th>
+          <th>
+              Valor
+          </th>
+          <th>
+              Ação
+          </th>
+      </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor='let nota of entityResult.EntityList'>
+      <td>{{nota.Numero}}</td>    
+    </tr>
+</tbody>
+
+</table>
+
+
