@@ -7,13 +7,15 @@ import { UsuariosListComponent } from './usuarios-list/usuarios-list.component';
 
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { NotaListComponent } from './nota-list/nota-list.component'
+import { NotaListComponent } from './nota-list/nota-list.component';
+import { NotaNovaComponent } from './nota-nova/nota-nova.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuariosListComponent,
-    NotaListComponent
+    NotaListComponent,
+    NotaNovaComponent
   ],
   imports: [
     BrowserModule,

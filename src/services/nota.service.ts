@@ -16,4 +16,8 @@ export class NotaService {
   getAll(): Observable<EntityResult<Nota>>{
     return this.httpClient.get<EntityResult<Nota>>(`${environment.apiUrl}/notafiscal`);
   }
+
+  salve(nota: Nota): Observable<Nota> {
+    return this.httpClient.post<Nota>(`${environment.apiUrl}/notafiscal`, nota);
+  }
 }

@@ -1,8 +1,8 @@
 export class Nota{
-    Id: number;
-    Numero: number;
-    Emissor: string;
-    Observacoes: string;
-    ValorTotal: number;
-    DataEmissao: Date;
+    id: number;
+    numero: string;
+    emissor: string;
+    observacoes: string;
+    valorTotal: number;
+    dataEmissao: Date;
 }

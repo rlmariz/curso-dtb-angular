@@ -1,6 +1,8 @@
 <p>
   nota-list works!
 </p>
+
+<div *ngIf="entityResult">
 <table id="gridNotas">
 
   <thead>
@@ -21,11 +23,13 @@
   </thead>
 
   <tbody>
-    <tr *ngFor='let nota of entityResult.EntityList'>
-      <td>{{nota.Numero}}</td>    
+    <tr *ngFor='let nota of entityResult.entityList'>
+      <td>{{nota.numero}}</td>
+      <td>{{nota.emissor}}</td>
+      <td>{{nota.valorTotal}}</td>
     </tr>
 </tbody>
 
 </table>
-
+</div>
 

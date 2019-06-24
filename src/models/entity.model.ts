@@ -1,6 +1,6 @@
 export class EntityResult<T>
 {
-    EntityList: T[];
-    TotalPages: number;
-    TotalRecords: number;
+    entityList: T[];
+    totalPages: number;
+    totalRecords: number;
 }
