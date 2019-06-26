@@ -24,9 +24,13 @@
 
     <div class="form-group">
         <label for="emissor">Emissor</label>
-        <input type="text" [(ngModel)]="nota.emissor" required id="emissor" name="emissor" class="form-control" #emissor="ngModel">
-        <div class="alert alert-danger" [hidden]="emissor.valid">
+        <input type="text" (blur)="obterEmissor()" [(ngModel)]="emissor.cnpj" required id="emissor" name="emissor" class="form-control" #emissorcnpj="ngModel">
+        <input type="hidden" [(ngModel)]="nota.emissorId" required name="emissorId" id="emissorId">
+        <div [hidden]="emissorcnpj.valid && emissor.id > 0" class="alert alert-danger" [hidden]="emissor.valid">
             Emissor Valor requerido
+        </div>
+        <div *ngIf="emissor.id> 0" class="alert alert-secondary">
+            {{emissor.nome}}
         </div>
     </div>    
       <button type="submit" [disabled]="!notaForm.form.valid" class="btn" [ngClass]="{'btn-success': notaForm.form.valid, 'btn-secondary': !notaForm.form.valid}" >Salvar</button>
