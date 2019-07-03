@@ -8,14 +8,16 @@ import { UsuariosListComponent } from './usuarios-list/usuarios-list.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NotaListComponent } from './nota-list/nota-list.component';
-import { NotaNovaComponent } from './nota-nova/nota-nova.component'
+import { NotaNovaComponent } from './nota-nova/nota-nova.component';
+import { NotaItensComponent } from './nota-itens/nota-itens.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuariosListComponent,
     NotaListComponent,
-    NotaNovaComponent
+    NotaNovaComponent,
+    NotaItensComponent
   ],
   imports: [
     BrowserModule,

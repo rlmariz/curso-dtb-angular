@@ -1,3 +1,5 @@
+import { ItemModel } from './item.model';
+
 export class Nota{
     id: number;
     numero: string;
@@ -6,4 +8,5 @@ export class Nota{
     observacoes: string;
     valorTotal: number;
     dataEmissao: Date;
+    itens: ItemModel[];
 }

@@ -3,7 +3,7 @@
 </p>
 
 <div *ngIf="entityResult">
-<table id="gridNotas">
+<table id="gridNotas" class="table table-striped">
 
   <thead>
       <tr>
@@ -19,6 +19,9 @@
           <th>
               Ação
           </th>
+          <th>
+              Itens
+          </th>
       </tr>
   </thead>
 
@@ -27,6 +30,12 @@
       <td>{{nota.numero}}</td>
       <td>{{nota.emissor}}</td>
       <td>{{nota.valorTotal}}</td>
+      <td>
+        <a [routerLink]="['/nota-itens', nota.id]">itens</a>  
+      </td>
+      <td>
+          <app-nota-itens [itens]="nota.itens"></app-nota-itens>
+      </td>
     </tr>
 </tbody>
 
